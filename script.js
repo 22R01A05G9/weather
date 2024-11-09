@@ -2,7 +2,8 @@ document.getElementById('getWeather').addEventListener('click', getWeather);
 
 async function getWeather() {
     const location = document.getElementById('location').value;
-    const apiKey = 'YOUR_API_KEY'; // Get your API key from OpenWeatherMap
+    const apiKey = 'cd567a5d101fb06cd08e8f89033e2afc
+'; // Get your API key from OpenWeatherMap
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`;
 
     try {
