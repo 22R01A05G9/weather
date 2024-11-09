@@ -21,6 +21,26 @@ async function getWeather() {
         document.getElementById('weatherResult').innerText = `Error: ${error.message}`;
     }
 }
+function changeBackground(condition) {
+    const body = document.body;
+    
+    // Define background image URLs for different weather conditions
+    const backgrounds = {
+        clear: 'url("images/sunny.jpg")',
+        clouds: 'url("images/cloudy.jpg")',
+        rain: 'url("images/rainy.jpg")',
+        snow: 'url("images/snowy.jpg")',
+        thunderstorm: 'url("images/thunderstorm.jpg")',
+        mist: 'url("images/misty.jpg")',
+        default: 'url("images/default.jpg")'  // Fallback background
+    };
+    
+    // Apply the background based on weather condition
+    body.style.background = backgrounds[condition] || backgrounds.default;
+    body.style.backgroundSize = 'cover';  // Ensure the background covers the screen
+    body.style.backgroundPosition = 'center center';
+    body.style.backgroundAttachment = 'fixed';  // Keep background fixed during scrolling
+}
 
 function displayWeather(data) {
     const { name, main: { temp }, weather } = data;
