@@ -5,50 +5,55 @@
     box-sizing: border-box;
 }
 
-/* Body styles */
+/* Body styling */
 body {
     font-family: Arial, sans-serif;
-    background-size: cover;
+    background-size: cover;  /* Ensure the background covers the entire page */
     background-position: center center;
-    background-attachment: fixed;
+    background-attachment: fixed;  /* Fix the background during scrolling */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh;  /* Ensure the body takes up the full viewport height */
+    transition: background 0.5s ease-in-out;  /* Smooth transition for background change */
 }
 
-/* Container to center the app */
+/* Container for the weather app */
 .container {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);  /* Semi-transparent background */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 300px;
+    width: 90%;  /* Make it responsive */
+    max-width: 400px;  /* Limit maximum width */
     text-align: center;
+    backdrop-filter: blur(10px);  /* Optional: Adds a blur effect behind the container */
 }
 
 /* Heading styles */
 h1 {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 20px;
     color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 /* Input field styles */
 #location {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Button styles */
 #getWeather {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background-color: #3498db;
     color: #fff;
     font-size: 16px;
@@ -56,6 +61,7 @@ h1 {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Button hover effect */
@@ -94,4 +100,21 @@ h1 {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* Make sure the layout is responsive on smaller devices */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        width: 90%;
+        max-width: none;  /* Allow the container to fill the available width on small screens */
+    }
+
+    h1 {
+        font-size: 24px;  /* Smaller heading size for smaller screens */
+    }
+
+    #location, #getWeather {
+        font-size: 14px;  /* Smaller font size for inputs and button */
+    }
 }
