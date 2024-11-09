@@ -32,6 +32,20 @@ function changeBackground(condition) {
         snow: 'url("images/snowy.jpg")',
         thunderstorm: 'url("images/thunderstorm.jpg")',
         mist: 'url("images/misty.jpg")',
+        Sunny: 'url("images/sunny.jpg")',
+        Windy: 'url("images/misty.jpg")',
+        Stormy: 'url("images/thunderstorm.jpg")',
+        Chilly: 'url("images/sunny.jpg")',
+        Snowy: 'url("images/snowy.jpg")',
+        Gloomy: 'url("images/thunderstorm.jpg")',
+        Foggy: 'url("images/misty.jpg")',
+        Icy: 'url("images/snowy.jpg")',
+        Cold: 'url("images/snowy.jpg")',
+        Hot: 'url("images/sunny.jpg")',
+        Humid: 'url("images/cloudy.jpg")',
+        Warm: 'url("images/sunny.jpg")',
+        Hazy: 'url("images/snowy.jpg")',
+        Misty: 'url("images/misty.jpg")',
         default: 'url("images/default.jpg")'  // Fallback background
     };
     
