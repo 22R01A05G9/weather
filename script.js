@@ -41,6 +41,7 @@ function changeBackground(condition) {
         Humid: 'url("images/cloudy.jpg")',
         Warm: 'url("images/sunny.jpg")',
         Hazy: 'url("images/snowy.jpg")',
+        haze: 'url("images/snowy.jpg")',
         Misty: 'url("images/misty.jpg")',
         default: 'url("images/default.jpg")'  // Fallback background
     };
@@ -64,5 +65,5 @@ function displayWeather(data) {
     `;
     
     // Change background based on weather condition
-    changeBackground(weatherDescription);
+    changeBackground(Description);
 }
